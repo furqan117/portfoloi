@@ -52,12 +52,12 @@ export const ContactSection = () => {
 
             <div className="pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground mb-4">
-                Download my CV for more details about my experience
+                View or download my CV for more details
               </p>
-              <Button asChild variant="ghost" size="lg" className="gradient-border bg-transparent">
-                <a href="/cv-furqan-farhan.pdf" download>
+              <Button asChild size="lg" variant="outline" className="gradient-border bg-transparent">
+                <a href="/cv">
                   <Download className="mr-2 h-4 w-4" />
-                  Download CV
+                  View CV
                 </a>
               </Button>
             </div>
