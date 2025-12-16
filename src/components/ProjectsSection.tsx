@@ -15,6 +15,35 @@ const projects = [
     tech: ['React', 'Next.js', 'JavaScript', 'Database'],
     github: 'https://github.com/somnog/Doctor-Appointment-System',
     isTeamProject: true,
+    icon: '🏥',
+  },
+  {
+    title: 'Hotel Management System',
+    description: 'A comprehensive desktop application for managing hotel operations including room bookings, guest management, and billing.',
+    features: [
+      'Room reservation & availability tracking',
+      'Guest check-in/check-out management',
+      'Billing and invoice generation',
+      'Staff management dashboard',
+    ],
+    tech: ['Java', 'MySQL', 'JDBC', 'Swing'],
+    github: 'https://github.com/furqan117',
+    isTeamProject: false,
+    icon: '🏨',
+  },
+  {
+    title: 'Islamic Learning App',
+    description: 'An interactive web application designed to help users learn about Islamic teachings, prayers, and Quran recitation.',
+    features: [
+      'Prayer times & reminders',
+      'Quran reading with translations',
+      'Islamic calendar & events',
+      'Daily duas and supplications',
+    ],
+    tech: ['React', 'JavaScript', 'Tailwind CSS', 'API Integration'],
+    github: 'https://github.com/furqan117',
+    isTeamProject: false,
+    icon: '🕌',
   },
 ];
 
@@ -46,7 +75,7 @@ export const ProjectsSection = () => {
                 <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
                   <div>
                     <h3 className="text-2xl font-bold mb-2 flex items-center gap-3">
-                      <span className="text-3xl">🏥</span>
+                      <span className="text-3xl">{project.icon}</span>
                       {project.title}
                     </h3>
                     {project.isTeamProject && (
