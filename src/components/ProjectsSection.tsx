@@ -5,7 +5,8 @@ import { Button } from '@/components/ui/button';
 const projects = [
   {
     title: 'Doctor Appointment System',
-    description: 'A web-based system that helps manage doctor schedules, patient appointments, and admin controls.',
+    description:
+      'A web-based system that helps manage doctor schedules, patient appointments, and admin controls.',
     features: [
       'Role-based access (Admin, Doctor, Patient)',
       'Appointment booking & management',
@@ -19,7 +20,8 @@ const projects = [
   },
   {
     title: 'Hotel Management System',
-    description: 'A comprehensive desktop application for managing hotel operations including room bookings, guest management, and billing.',
+    description:
+      'A comprehensive desktop application for managing hotel operations including room bookings, guest management, and billing.',
     features: [
       'Room reservation & availability tracking',
       'Guest check-in/check-out management',
@@ -33,7 +35,8 @@ const projects = [
   },
   {
     title: 'Islamic Learning App',
-    description: 'An interactive web application designed to help users learn about Islamic teachings, prayers, and Quran recitation.',
+    description:
+      'An interactive web application designed to help users learn about Islamic teachings, prayers, and Quran recitation.',
     features: [
       'Prayer times & reminders',
       'Quran reading with translations',
@@ -44,6 +47,22 @@ const projects = [
     github: 'https://github.com/furqan117',
     isTeamProject: false,
     icon: '🕌',
+  },
+  {
+    title: 'Task Management System',
+    description:
+      'A web-based task management system that helps users create, assign, and track tasks with deadlines and statuses.',
+    features: [
+      'User authentication & authorization',
+      'Create, update, delete tasks (CRUD)',
+      'Task status (Pending, In Progress, Completed)',
+      'Deadline tracking & reminders',
+      'Simple admin dashboard',
+    ],
+    tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+    github: 'https://github.com/furqan117',
+    isTeamProject: false,
+    icon: '📋',
   },
 ];
 
@@ -78,6 +97,7 @@ export const ProjectsSection = () => {
                       <span className="text-3xl">{project.icon}</span>
                       {project.title}
                     </h3>
+
                     {project.isTeamProject && (
                       <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">
                         <Users className="h-3 w-3" />
@@ -85,17 +105,22 @@ export const ProjectsSection = () => {
                       </span>
                     )}
                   </div>
-                  <div className="flex gap-2">
-                    <Button asChild variant="outline" size="sm">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
-                  </div>
+
+                  <Button asChild variant="outline" size="sm">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="h-4 w-4 mr-2" />
+                      Code
+                    </a>
+                  </Button>
                 </div>
 
-                <p className="text-muted-foreground mb-6">{project.description}</p>
+                <p className="text-muted-foreground mb-6">
+                  {project.description}
+                </p>
 
                 <div className="mb-6">
                   <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-muted-foreground">
@@ -103,7 +128,10 @@ export const ProjectsSection = () => {
                   </h4>
                   <ul className="grid sm:grid-cols-2 gap-2">
                     {project.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2 text-sm text-muted-foreground"
+                      >
                         <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                         {feature}
                       </li>
@@ -137,7 +165,11 @@ export const ProjectsSection = () => {
             You can find more of my projects on my GitHub profile
           </p>
           <Button asChild variant="outline" className="gradient-border bg-transparent">
-            <a href="https://github.com/furqan117" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/furqan117"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Github className="h-4 w-4 mr-2" />
               View All Projects
               <ExternalLink className="h-4 w-4 ml-2" />
