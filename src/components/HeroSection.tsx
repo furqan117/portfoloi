@@ -79,9 +79,9 @@ export const HeroSection = () => {
             </a>
           </Button>
           <Button asChild variant="ghost" size="lg">
-            <a href="#contact">
+            <a href="/cv">
               <Download className="mr-2 h-4 w-4" />
-              Download CV
+              View CV
             </a>
           </Button>
         </motion.div>
